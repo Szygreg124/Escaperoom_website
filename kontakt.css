@@ -1,0 +1,153 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* HEADER */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    color: #ff0099;
+    text-shadow: 0px 0px 8px #ff0099, 0px 0px 16px #ff0099;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ccff;
+    text-shadow: 0px 0px 10px #00ccff, 0px 0px 20px #00ccff;
+}
+
+/* Kontakt seksjon */
+.contact-page {
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.contact-page h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    color: #ff0099;
+    text-shadow: 0px 0px 10px #ff0099, 0px 0px 20px #ff0099;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #ddd;
+}
+
+/* Kontaktinformasjon */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact-item {
+    flex-basis: 30%;
+}
+
+.contact-item i {
+    font-size: 50px;
+    color: #00ccff;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.contact-item h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.contact-item a {
+    color: #00ccff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item:hover i {
+    transform: scale(1.2);
+}
+
+/* Animasjoner */
+.contact-info {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.contact-info.fade-in {
+    opacity: 1;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #ddd;
+}
