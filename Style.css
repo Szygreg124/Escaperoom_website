@@ -260,55 +260,53 @@ header {
     line-height: 1.6;
 }
 
-/* KONTAKT PAGE */
-.contact-page {
-    padding: 100px 0;
-    background-color: #111;
-}
 
-.contact-page h2 {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 36px;
-    color: #ff0099;
-    text-shadow: 0px 0px 10px #ff0099, 0px 0px 20px #ff0099;
-    margin-bottom: 30px;
-}
-
-.contact-info {
+/* Pixelated Loader Styles */
+.pixelated-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    z-index: 9999;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-item {
-    flex-basis: 30%;
+.pixelated-loader .pixel {
+    width: 30px;
+    height: 30px;
+    background-color: #ff0099;
+    animation: pixelBounce 0.5s infinite; /* Faster Animation */
+    margin: 5px;
 }
 
-.contact-item i {
-    font-size: 50px;
-    color: #00ccff;
-    margin-bottom: 15px;
-    transition: transform 0.3s;
+.pixelated-loader .pixel:nth-child(2) {
+    animation-delay: 0.1s;
 }
 
-.contact-item h3 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 22px;
-    color: #00ccff;
-    margin-bottom: 10px;
+.pixelated-loader .pixel:nth-child(3) {
+    animation-delay: 0.2s;
 }
 
-.contact-item p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #ddd;
+.pixelated-loader .pixel:nth-child(4) {
+    animation-delay: 0.3s;
 }
 
-.contact-item a {
-    color: #00ccff;
-    text-decoration: none;
+.pixelated-loader .pixel:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+/* Keyframe Animation */
+@keyframes pixelBounce {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
 }

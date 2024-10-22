@@ -10,6 +10,7 @@ body {
     background-color: #0d0d0d;
     color: #fff;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
     max-width: 1200px;
 }
 
-/* HEADER */
+/* HEADER STYLES */
 header {
     background-color: #1a1a1a;
     color: white;
@@ -38,9 +39,10 @@ header {
 
 .logo h1 {
     font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
-    color: #ff0099;
-    text-shadow: 0px 0px 8px #ff0099, 0px 0px 16px #ff0099;
+    font-size: 22px;
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px #ff00ff, 0px 0px 16px #ff00ff;
+    animation: neon-glow 2s infinite alternate;
 }
 
 .nav-links {
@@ -62,8 +64,8 @@ header {
 }
 
 .nav-links a:hover {
-    color: #00ccff;
-    text-shadow: 0px 0px 10px #00ccff, 0px 0px 20px #00ccff;
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #00ffff;
 }
 
 /* Kontakt seksjon */
@@ -76,14 +78,14 @@ header {
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     font-size: 36px;
-    color: #ff0099;
-    text-shadow: 0px 0px 10px #ff0099, 0px 0px 20px #ff0099;
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px #ff00ff, 0px 0px 16px #ff00ff;
     margin-bottom: 30px;
 }
 
 .section-description {
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 18px;
     margin-bottom: 50px;
     color: #ddd;
