@@ -71,6 +71,14 @@
         </div>
     </footer>
 
+    <div class="pixelated-loader" id="loader">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+    </div>
+    
 
     <script>
        
@@ -83,6 +91,43 @@
                 rooms.classList.add('fade-in');
             }
         });
+        document.addEventListener('DOMContentLoaded', () => {
+const loader = document.getElementById('loader');
+
+// Function to show the loader
+function showLoader() {
+loader.style.display = 'flex';
+}
+
+// Function to hide the loader
+function hideLoader() {
+loader.style.display = 'none';
+}
+
+// Initially hide the loader
+hideLoader();
+
+// Handle clicks on internal links
+const links = document.querySelectorAll('a[href]');
+links.forEach(link => {
+link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href.endsWith('.html') || href.endsWith('.css')) {
+        e.preventDefault();
+        showLoader();
+
+        setTimeout(() => {
+            window.location.href = href;
+        }, 1000);  // Adjust the delay as needed
+    }
+});
+});
+
+// Hide loader when the new page is fully loaded
+window.addEventListener('load', () => {
+hideLoader();
+});
+});
     </script>
 </body>
 </html>
