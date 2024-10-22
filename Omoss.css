@@ -10,6 +10,7 @@ body {
     background-color: #0d0d0d;
     color: #fff;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
     max-width: 1200px;
 }
 
-/* HEADER */
+/* HEADER STYLES */
 header {
     background-color: #1a1a1a;
     color: white;
@@ -39,8 +40,9 @@ header {
 .logo h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 22px;
-    color: #ff0099;
-    text-shadow: 0px 0px 8px #ff0099, 0px 0px 16px #ff0099;
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px #ff00ff, 0px 0px 16px #ff00ff;
+    animation: neon-glow 2s infinite alternate;
 }
 
 .nav-links {
@@ -53,4 +55,136 @@ header {
 }
 
 .nav-links a {
-    font-family:
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ffff;
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #00ffff;
+}
+
+/* ABOUT PAGE */
+.about-page {
+    padding: 100px 0;
+    background-color: #111;
+    color: #fff;
+}
+
+.about-page h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    color: #ff00ff;
+    text-shadow: 0px 0px 10px #ff00ff, 0px 0px 20px #ff00ff;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+/* TEAM GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.team-grid.fade-in {
+    opacity: 1;
+}
+
+.team-member {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: #ff00ff;
+    margin-bottom: 15px;
+}
+
+.team-member p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+/* FOOTER STYLES */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* ANIMATIONS */
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 8px #ff00ff, 0 0 16px #ff00ff, 0 0 32px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 16px #ff00ff, 0 0 32px #ff00ff, 0 0 64px #ff00ff;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

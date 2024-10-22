@@ -95,6 +95,8 @@ header {
     justify-content: space-around;
     margin-bottom: 50px;
     text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .contact-item {
@@ -134,16 +136,6 @@ header {
     transform: scale(1.2);
 }
 
-/* Animasjoner */
-.contact-info {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.contact-info.fade-in {
-    opacity: 1;
-}
-
 /* FOOTER */
 footer {
     padding: 20px 0;
@@ -151,3 +143,21 @@ footer {
     background-color: #1a1a1a;
     color: #ddd;
 }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Reset to original position */
+    }
+}
+
+/* When the section comes into view */
+.contact-info.fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
