@@ -271,3 +271,99 @@ header {
         opacity: 0.5;
     }
 }
+
+.contact-page {
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.contact-page h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px #ff00ff, 0px 0px 16px #ff00ff;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #ddd;
+}
+
+/* Kontaktinformasjon */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.contact-item {
+    flex-basis: 30%;
+}
+
+.contact-item i {
+    font-size: 50px;
+    color: #00ccff;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.contact-item h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    color: #00ccff;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.contact-item a {
+    color: #00ccff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-item:hover i {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #ddd;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Reset to original position */
+    }
+}
+
+/* When the section comes into view */
+.contact-info.fade-in {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
