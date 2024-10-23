@@ -206,45 +206,6 @@ header {
     line-height: 1.6;
 }
 
-
-/* Pixelated Loader Styles */
-.pixelated-loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0d0d0d;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pixelated-loader .pixel {
-    width: 30px;
-    height: 30px;
-    background-color: #ff0099;
-    animation: pixelBounce 0.5s infinite; /* Faster Animation */
-    margin: 5px;
-}
-
-.pixelated-loader .pixel:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.pixelated-loader .pixel:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.pixelated-loader .pixel:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.pixelated-loader .pixel:nth-child(5) {
-    animation-delay: 0.4s;
-}
-
 /* Keyframe Animation */
 @keyframes pixelBounce {
     0%, 100% {
