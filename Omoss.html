@@ -44,18 +44,54 @@
                     <div class="team-member">
                         <img src="/Bilder/Yep.jpeg" alt="Designer">
                         <h3>Kristian Viloria</h3>
-                        <p></p>
+                        <p>
+                            Kristian Viloria er assisterende ansvarlig i kontrollrommet, kjent for sitt skarpe blikk for detaljer og evne til å holde hodet kaldt under press. Han støtter hovedansvarlig i overvåkning og problemløsning, og hans sterke kommunikasjonsevner gjør ham til en pålitelig leder for teamet.</p>
                     </div>
                     <div class="team-member">
-                        <img src="/Bilder/yes.jpeg" alt="Utvikler">
-                        <h3>Simen Hedlo Saasen</h3>
-                        <p></p>
+                        <img src="/Bilder/Media.jpeg" alt="Utvikler">
+                        <h3>Norias Thangaraja</h3>
+                        <p>
+                            Norias Thangaraja er en analytisk og teknisk dyktig operatør i kontrollrommet, ansvarlig for sanntidsovervåkning og problemløsning. Med kreativitet under press og forslag til forbedringer, bidrar han sterkt til teamets effektivitet.</p>
                     </div>
                 </div>
-                <div class="team-member">
-                    <img src="/Bilder/gruppe.jpeg" width="1000px">
-
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="/Bilder/bald.jpeg" alt="Image 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/Bilder/gruppe.jpeg" alt="Image 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/Bilder/shared image (3).jpeg" alt="Image 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/Bilder/gruppe4.jpeg" alt="Image 4">
+                        </div>
+                    </div>
+                    <button class="prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+                    <button class="next-btn" onclick="moveCarousel(1)">&#10095;</button>
                 </div>
+                <script>
+                    let currentIndex = 0;
+                
+                    function moveCarousel(direction) {
+                        const carousel = document.querySelector('.carousel');
+                        const slides = document.querySelectorAll('.carousel-slide');
+                        const totalSlides = slides.length;
+                
+                        currentIndex += direction;
+                
+                        if (currentIndex < 0) {
+                            currentIndex = totalSlides - 1;
+                        } else if (currentIndex >= totalSlides) {
+                            currentIndex = 0;
+                        }
+                
+                        const offset = currentIndex * -100;
+                        carousel.style.transform = `translateX(${offset}%)`;
+                    }
+                </script>
             </div>
         </section>
     </main>
